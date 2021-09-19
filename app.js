@@ -1,10 +1,10 @@
 var bodyParser = require("body-parser"),
-mongoose       = require("mongoose"),
-express        = require("express"),
-app            = express();
-passport = require("passport")
-LocalStrategy = require("passport-local")
-User = require("./models/user")
+    mongoose       = require("mongoose"),
+    express        = require("express"),
+    app            = express();
+    passport = require("passport")
+    LocalStrategy = require("passport-local")
+    User = require("./models/user")
 mongoose.connect("mongodb+srv://jishanmsharif:mis+GDKY5+@cluster0.gtk6v.mongodb.net/myFirstDatabase?retryWrites=true&w=majority",{ useNewUrlParser: true });
 
 app.use(bodyParser.urlencoded({extended: true}));
@@ -24,9 +24,11 @@ app.post("/register", function(req, res){
         username: req.body.username,
         firstname: req.body.firstname,
         lastname:req.body.lastname, 
-        sex: req.body.sex, 
-        email: req.body.email, 
-        avatar: req.body.avatar})
+        password: req.body.password,
+        email: req.body.email,
+        sex: req.body.sex,
+        height: req.body.height,
+        weight: req.body.weight })
     User.register(newUser, req.body.password, function(err, newUser){
         if(err){
             req.flash("error", err.message);
@@ -53,6 +55,6 @@ app.get("/logout", function(req, res){
     res.send("User has been signed out")
 })
 
-app.listen(process.env.IP, process.env.PORT, function(){
+app.listen(3000, process.env.PORT, function(){
     console.log("SERVER IS RUNNING!");
 })
