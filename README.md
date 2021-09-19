@@ -1,4 +1,6 @@
-# calscanner
+<img width="934" alt="Screen Shot 2021-09-19 at 12 45 01 AM" src="https://user-images.githubusercontent.com/69412310/133932952-3388a401-6ebb-4dcb-89d8-18dc9e218a13.png">
+
+# Cal Scanner
 After a year of sitting around the house, the last thing we needed in our lives is a sedentary diet. With the help of Cal Scanner, users can see just how much calorie intake their plate of food it without the tediousness of googling recipes and manually counting calories.
 
 # What it does:
