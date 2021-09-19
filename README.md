@@ -8,6 +8,9 @@ Users can take pictures of their food and drinks and Cal Scanner will detect the
 
 After your big meal, Cal Scanner can also recommend workout activities to do to burn off your target calorie count for the day. Workouts can vary from requiring gym equipment to only needing your body and motivation!
 
+<img width="452" alt="Screen Shot 2021-09-19 at 2 04 25 AM" src="https://user-images.githubusercontent.com/69412310/133932967-9f111028-f4d2-4efa-b244-958e1689cc21.png">
+
+<img width="402" alt="Screen Shot 2021-09-19 at 2 24 15 AM" src="https://user-images.githubusercontent.com/69412310/133932971-a69f1906-03eb-45be-b84d-2cdb9a2c8260.png">
 
 # Compile Instructions
 TBD
