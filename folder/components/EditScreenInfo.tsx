@@ -1,10 +1,11 @@
 import * as WebBrowser from 'expo-web-browser';
 import React from 'react';
 import { StyleSheet, TouchableOpacity } from 'react-native';
-
 import Colors from '../constants/Colors';
 import { MonoText } from './StyledText';
 import { Text, View } from './Themed';
+import { GoogleLogin } from 'react-google-login';
+
 
 export default function EditScreenInfo({ path }: { path: string }) {
   return (
@@ -17,33 +18,32 @@ export default function EditScreenInfo({ path }: { path: string }) {
           Healthier choices at the touch of a button
         </Text> 
       </View>
-
-      <View style={styles.helpContainer}>
-        <TouchableOpacity onPress={googleSignIn} style={styles.helpLink}>
-        </TouchableOpacity>
-      </View>
     </View>
   );
 }
 
-function googleSignIn(googleUser) {
-  console.log('Logged in as: ' + googleUser.getBasicProfile().getName());
-    }
+// Google Log in insert
+const responseGoogle = (response) => {
+  console.log(response);
 }
-  function onFailure(error) {
-    console.log(error);
-  }
-  function renderButton() {
-    gapi.signin2.render('my-signin2', {
-      'scope': 'profile email',
-      'width': 240,
-      'height': 50,
-      'longtitle': true,
-      'theme': 'dark',
-      'onsuccess': onSuccess,
-      'onfailure': onFailure
-    });
-  }
+
+ReactDOM.render(
+  <GoogleLogin
+    clientId="658977310896-knrl3gka66fldh83dao2rhgbblmd4un9.apps.googleusercontent.com"
+    buttonText="Login"
+    onSuccess={responseGoogle}
+    onFailure={responseGoogle}
+    cookiePolicy={'single_host_origin'}
+  />,
+  document.getElementById('googleButton')
+);
+
+<GoogleLogin
+  clientId="658977310896-knrl3gka66fldh83dao2rhgbblmd4un9.apps.googleusercontent.com"
+  onSuccess={responseGoogle}
+  isSignedIn={true}
+/>
+
 
 const styles = StyleSheet.create({
   getStartedContainer: {
