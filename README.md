@@ -12,5 +12,4 @@ After your big meal, Cal Scanner can also recommend workout activities to do to 
 
 <img width="402" alt="Screen Shot 2021-09-19 at 2 24 15 AM" src="https://user-images.githubusercontent.com/69412310/133932971-a69f1906-03eb-45be-b84d-2cdb9a2c8260.png">
 
-# Compile Instructions
-TBD
+
